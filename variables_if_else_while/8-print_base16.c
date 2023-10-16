@@ -9,6 +9,7 @@
 int main(void)
 {
 	char hex = 48;
+	
 	while (hex <= 57)
 	{
 		putchar(hex);
