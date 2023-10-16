@@ -1,9 +1,9 @@
 #include "main.h"
 
-
 /**
  * _islower - checks if lowercase or not
- * description: check character is low or not and give feedback
+ * @c: holds letter
+ *description: check character is low or not and give feedback
  *
  * Return: return 1 if yes , 0 if no
  */
