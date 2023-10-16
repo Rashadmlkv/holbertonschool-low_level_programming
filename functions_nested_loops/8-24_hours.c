@@ -1,39 +1,41 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+
+/**
+ * jack_bauer - for printing 24 hour
+ *
+ * Return: finish printing at 23:59
+ */
+void jack_bauer(void)
 {
-	int counter = 0;
 	int hour1 = 48;
 	int hour2 = 48;
 	int min1 = 48;
 	int min2 = 48;
 
 	for (; hour1 < 51; hour1++)
-	  {
-	  for (; hour2 < 58; hour2++)
+	{
+		for (; hour2 < 58; hour2++)
 		{
-		  for (; min1 < 54; min1++)
+			for (; min1 < 54; min1++)
 			{
-			  for (; min2 < 58; min2++)
+				for (; min2 < 58; min2++)
 				{
-				  if (hour1 == 50 && hour2 == 51 && min1 == 53 && min2 == 57)
-					{
-					  return (0);
-					}
-				  else
-					{
-					  putchar(hour1);
-					  putchar(hour2);
-					  putchar(':');
-					  putchar(min1);
-					  putchar(min2);
-					  putchar('\n');
-					}
+					_putchar(hour1);
+					_putchar(hour2);
+					_putchar(':');
+					_putchar(min1);
+					_putchar(min2);
+					_putchar('\n');
 				}
-			  min2 = 48;
+				if (hour1 == 50 && hour2 == 51 && min1 == 53 && min2 == 58)
+				{
+				   return;
+				}
+				min2 = 48;
 			}
-		  min1 = 48;
+			min1 = 48;
 		}
-	  hour2 = 48;
-	  }
+		hour2 = 48;
+	}
 }
