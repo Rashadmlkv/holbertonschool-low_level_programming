@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * Description: print state of random num , negative positive or zero
- *
  * main - Entry point
+ * description: print state of number positive negative or zero
+ *
  * Return: Always 0
  */
 int main(void)
