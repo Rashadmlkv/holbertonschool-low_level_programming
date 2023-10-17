@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n, m, num=0;
+
+    
+    for (n = 0; n <= 9; n++)
+    {
+        for (m = 0; m <= 9; m++)
+        {
+            if ( n == 0 || m == 0)
+                putchar('0');
+            else 
+                num+=n;
+                putchar(num);
+            if (m < 9)
+            {
+                putchar(',');
+                putchar(' ');
+            }
+        }
+        putchar('\n');
+        m = 48;
+    }
+}
