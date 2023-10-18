@@ -42,6 +42,7 @@ void times_table(void)
 				}
 				else
 				{
+					if (num1 > 0)
 					{
 						_putchar(num1 + '0');
 						_putchar(num2 + '0');
