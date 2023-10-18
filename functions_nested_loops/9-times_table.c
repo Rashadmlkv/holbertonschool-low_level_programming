@@ -1,51 +1,64 @@
 #include "main.h"
-#include <stdio.h>
 
-void times_table(void) {
-	int n, m;
-	char num1, num2;
-
-for (n = 0; n <= 9; n++)
+/**
+ * times_table - print numbers
+ * Description - numbers
+ *
+ * Return: no return
+ */
+void times_table(void)
 {
-        num1 ='0'; num2 = '0';
-        printf("## Line %d\n", n);
-    for (m = 0; m <= 9; m++)
-    {
-            if ( n == 0 || m == 0)
-            {
-                if(m > 0)
-                {
-                        _putchar(' ');
-                        _putchar('0');
-                }
-                else
-                _putchar('0');
-            }
-            else
-            {
-                    printf("num2 : %d - n : %d\n", num2, n);
-                    num2+= '0' + n;
-                if(num2 > '9')
-                {
-                        num1+=1;
-                        _putchar(num1);
-                        _putchar(num2);
-                }
-                else
-                {
-                        _putchar(' ');
-                        _putchar(num2);
-                }
-            }
+	int x, y;
+	int num1, num2, lasdigi;
 
-            if (m < 9)
-            {
-            _putchar(',');
-            _putchar(' ');
-            }
-    }
-    _putchar('\n');
-    m = '0';
-}
-
+	for (x = 0; x <= 9; x++)
+	{
+		num1 = 0;
+		num2 = 0;
+		for (y = 0; y <= 9; y++)
+		{
+			if (x == 0 || y == 0)
+			{
+				if (y > 0)
+				{
+					_putchar(' ');
+					_putchar('0');
+				}
+				else
+				{
+					_putchar('0');
+				}
+			}
+			else
+			{
+				num2 += x;
+				if (num2 > 9)
+				{
+					num1 += 1;
+					lasdigi = num2 % 10;
+					num2 = lasdigi;
+					_putchar(num1 + '0');
+					_putchar(num2 + '0');
+				}
+				else
+				{
+					{
+						_putchar(num1 + '0');
+						_putchar(num2 + '0');
+					}
+					else
+					{
+						_putchar(' ');
+						_putchar(num2 + '0');
+					}
+				}
+			}
+			if (y < 9)
+			{
+			_putchar(',');
+			_putchar(' ');
+			}
+		}
+		_putchar('\n');
+	}
 }
