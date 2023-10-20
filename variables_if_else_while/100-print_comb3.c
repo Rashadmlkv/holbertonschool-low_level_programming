@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - source
+ * Description: print combinations of two numbers
+ * Return: always 0
+ */
 int main(void)
 {
 	int num1, num2;
