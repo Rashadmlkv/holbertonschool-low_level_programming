@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * print_diagonal - funcname
+ * @n: argument
+ * Description: print diogonal line n times
  */
 void print_diagonal(int n)
 {
