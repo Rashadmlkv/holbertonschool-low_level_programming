@@ -15,7 +15,7 @@ void puts_half(char *str)
 		base = (limit - 1) / 2;
 	else
 		base = (limit + 1) / 2;
-	for (; base < limit + 1; base++)
+	for (; base < limit; base++)
 	{
 		_putchar(str[base]); }
 	_putchar('\n');
