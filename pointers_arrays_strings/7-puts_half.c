@@ -12,7 +12,7 @@ void puts_half(char *str)
 	{
 		limit++; }
 	if (limit % 2 != 0)
-		base = (limit - 1) / 2;
+		base = limit / 2;
 	else
 		base = (limit + 1) / 2;
 	for (; base < limit; base++)
