@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * print_array - print vales of arr till n
+ * @a: array
+ * @n: count of number
+ */
 void print_array(int *a, int n)
 {
 	int i;
