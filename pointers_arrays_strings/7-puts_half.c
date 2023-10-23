@@ -11,7 +11,7 @@ void puts_half(char *str)
 	while (str[limit] != '\0')
 	{
 		limit++; }
-	if (limit % 2 != 0)
+	if (limit % 2 == 0)
 		base = limit / 2;
 	else
 		base = (limit + 1) / 2;
