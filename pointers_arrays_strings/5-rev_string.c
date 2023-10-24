@@ -1,23 +1,26 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * rev_string - print array reversed
  * @s: string
  */
 void rev_string(char *s)
 {
-	int i = 0, j;
-	char arr[10];
+	int i = 0;
+	char *buck;
 
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		arr[i] = s[i];
+		*buck = *s;
+		s++;
+		buck++;
 		i++;
 	}
-
-	for (j = 0; i >= 0; i--)
+	s--;
+	for (; i > 0; i--)
 	{
-		*(s + j) = arr[i - 1];
-		j++;
-		}
+
+		*s = *(buck - i);
+		s--;
+	}
 }
