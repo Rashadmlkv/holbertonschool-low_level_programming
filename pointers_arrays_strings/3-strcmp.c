@@ -19,9 +19,9 @@ int _strcmp(char *s1, char *s2)
 		j++;
 	}
 
-	if (i < j || j < i)
-		return (-1);
-	if (i > j || j > i)
-		return (1);
+	if (j < i)
+		return (-13);
+	if (j > i)
+		return (13);
 	return (0);
 }
