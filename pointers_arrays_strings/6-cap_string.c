@@ -13,7 +13,7 @@ char *cap_string(char *a)
 	{
 		if (a[i] >= 'a' && a[i] <= 'z')
 		{
-			if (a[i - 1] >= '\t' && a[i - 1] <= '/')
+			if (a[i - 1] >= '\0' && a[i - 1] <= '/')
 				a[i] = a[i] - 32; }
 	}
 	return (a);
