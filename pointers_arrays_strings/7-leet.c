@@ -9,6 +9,7 @@ char *leet(char *a)
 {
 	char arr[5] = {'a', 'e', 'o', 't', 'l'};
 	char num[5] = {'4', '3', '0', '7', '1'};
+	char *p = a;
 	int i, flag;
 
 	for (; *a != '\0'; a++)
@@ -21,5 +22,5 @@ char *leet(char *a)
 				*a = num[i];
 				flag = 0; } }
 	}
-	return (a);
+	return (p);
 }
