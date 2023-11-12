@@ -11,7 +11,7 @@ int _strlen(char *s)
 	int tmps = 0;
 
 	if (s == NULL)
-	  s = "";
+		s = "";
 	while (*s != '\0')
 	{
 		tmps++;
@@ -33,12 +33,12 @@ char *str_concat(char *s1, char *s2)
 	if (ptr == NULL)
 		return (NULL);
 	if (s1 == NULL)
-	  s1 = "";
+		s1 = "";
 	if (s2 == NULL)
-	  s2  = "";
+		s2  = "";
 	while (*s1 != '\0' || *s2 != '\0')
 	{
-	  if (*s1 != '\0')
+		if (*s1 != '\0')
 		{
 			ptr[i] = *s1;
 			s1++; }
