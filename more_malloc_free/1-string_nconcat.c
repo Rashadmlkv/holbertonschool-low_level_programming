@@ -24,12 +24,14 @@ unsigned int leng(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i, j, str1 = leng(s1), str2 = leng(s2);
+	unsigned int i, j, str1, str2;
 
 	if (s1 == NULL)
 		s1 = "";
+	str1 = leng(s1);
 	if (s2 == NULL)
 		s2 = "";
+	str2 = leng(s2);
 	if (n > str2)
 		n = str2;
 
