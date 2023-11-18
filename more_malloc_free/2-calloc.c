@@ -22,11 +22,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 1)
 	{
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nmemb; i++)
 		ptr[i] = 62;
 	}
 	else
-		for (i = 0; i < size; i++)
+		for (i = 0; i < nmemb; i++)
 			ptr[i] = 0;
 
 	return ptr;
