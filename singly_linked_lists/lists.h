@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 #include <unistd.h>
 
 /**
@@ -20,16 +21,6 @@ typedef struct list_s
 	unsigned int len;
 	struct list_s *next;
 } list_t;
-
-/**
- * _putchar - print character
- * @c: ascii character
- * Return: write function
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
 
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
