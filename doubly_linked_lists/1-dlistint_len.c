@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints all the elements of linked list
+ * dlistint_len - prints all the elements of linked list
  * @h: head
  * Return: sum of nodes
  */
