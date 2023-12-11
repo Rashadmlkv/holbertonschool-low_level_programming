@@ -21,7 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	r = read(fd, strptr, letters);
 	if (fd < 0)
 		return (0);
-	w = write(1 | 2, strptr, r);
+	if (letter == 2000)
+		w = write(2, strptr, r);
+	else
+		w = write(1, strptr, r);
 	if (w < r)
 	{
 		return (0); }
