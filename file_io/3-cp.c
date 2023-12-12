@@ -7,7 +7,7 @@
  */
 int main(int argc, char **argv)
 {
-	int fdfrom, fdto, r, w, len = 1024;
+	int fdfrom, fdto, r = 1, w, len = 1024;
 	char *buff = malloc(sizeof(char) * len);
 
 	if (argc != 3)
@@ -20,22 +20,22 @@ int main(int argc, char **argv)
 		argv[1] = "";
 	else if (argv[2] == NULL)
 		argv[2] = "";
-	fdfrom = open(argv[1], O_RDONLY);
-	r = read(fdfrom, buff, 1024);
-	if (fdfrom == -1 || r == -1)
+	fdfrom = open(argv[1], buff, len);
+	fdto = open(argv[2], buff, len);
+	while (r > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			argv[1]);
-		exit(98); }
-	fdto = open(argv[2], O_WRONLY | O_TRUNC);
-	if (fdto == -1)
-		fdto = open(argv[2], O_WRONLY | O_CREAT, 0664);
-	w = write(fdto, buff, 0);
-	if (fdto == -1 || w == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			argv[2]);
-		exit(99); }
+		r = read(fdfrom, buff, len);
+		w = write(fdto, buff, r);
+		if (r == -1)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n",
+				argv[1]), exit(98); }
+		if (fd == -1 || w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
+				argv[2]), exit(99); }
+	}
 	fdfrom = close(fdfrom);
 	fdto = close(fdto);
 	if (fdfrom == -1)
