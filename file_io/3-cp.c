@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	fdto = open(argv[2], O_WRONLY | O_TRUNC);
 	if (fdto == -1)
 		fdto = open(argv[2], O_WRONLY | O_CREAT, 0664);
-	w = write(fdto, buff, 1024);
+	w = write(fdto, buff, 0);
 	if (fdto == -1 || w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
